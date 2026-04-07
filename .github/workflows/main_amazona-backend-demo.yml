@@ -54,6 +54,7 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_04505DDCCFC44C35B83792ECBA7255B2 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BA01FCB7E9F94DEEABC376185C78E522 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1602F355A4B54DC68A7002B34B9F501F }}
+          client-secret: ${{ secrets.AZUREAPPSERVICE_CLIENTSECRET_04505DDCCFC44C35B83792ECBA7255B2 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -61,5 +62,5 @@ jobs:
         with:
           app-name: 'amazona-backend-demo'
           slot-name: 'Production'
-          package: .
+          package: backend
           
