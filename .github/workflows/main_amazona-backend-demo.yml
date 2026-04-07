@@ -37,8 +37,17 @@ jobs:
 
       - name: Copy frontend to build backend
         run: |
-          cp -r frontend/build backend/frontend
+          mkdir -p backend/frontend
+          cp -r frontend/build backend/frontend/
+      
+      - name: Verify frontend build
+        run: |
+          echo "Frontend build contents:"
+          ls -la frontend/build
+          echo "Copied to backend:"
+          ls -la backend/frontend
 
+          
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
