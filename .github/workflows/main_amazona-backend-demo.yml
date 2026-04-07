@@ -59,5 +59,4 @@ jobs:
         with:
           app-name: 'amazona-backend-demo'
           slot-name: 'Production'
-          package: ./backend
-          
+          package: .          
